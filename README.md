@@ -4,13 +4,13 @@ Aplikacja do nagrywania mowy i transkrypcji na tekst za pomocą OpenAI Whisper.
 
 ## Instalacja
 
+Jedno polecenie:
+
 ```bash
-git clone https://github.com/TWOJ_USER/notatka-glosowa.git
-cd notatka-glosowa
-./setup.sh
+curl -fsSL https://raw.githubusercontent.com/kkilian/notatka-glosowa/main/install.sh | bash
 ```
 
-Skrypt zainstaluje zależności, zbuduje aplikację, skopiuje do `/Applications` i doda do Docka.
+Automatycznie: klonuje, buduje, instaluje do `/Applications`, dodaje do Docka i uruchamia.
 
 Przy pierwszym uruchomieniu wklej swój klucz API OpenAI. Klucz zostanie zaszyfrowany i zapisany lokalnie (macOS Keychain).
 
