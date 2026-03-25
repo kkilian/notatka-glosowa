@@ -1,0 +1,38 @@
+{
+  "name": "notatka-glosowa",
+  "version": "1.0.0",
+  "description": "Notatka Głosowa — nagrywanie mowy z transkrypcją Whisper",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.krzykrzy.notatka-glosowa",
+    "productName": "Notatka Głosowa",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "dir",
+      "icon": "assets/icon.icns",
+      "entitlements": "entitlements.plist",
+      "entitlementsInherit": "entitlements.plist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/**"
+    ]
+  }
+}
